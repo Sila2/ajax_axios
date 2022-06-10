@@ -1,0 +1,23 @@
+{
+    "posts": [{
+        "id": 1,
+        "name": "adi1",
+        "surname": "soyadi1"
+    }, {
+        "id": 2,
+        "name": "adi2",
+        "surname": "soyadi2"
+    }, {
+        "id": 3,
+        "name": "adi3",
+        "surname": "soyadi3"
+    }],
+    "comments": [{
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+    }],
+    "profile": {
+        "name": "typicode"
+    }
+}
