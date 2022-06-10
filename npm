@@ -1,3 +1,4 @@
+npm i axios
 npm i -g json-server   //global yapı oluşturması, bütün projeye eklenmesi için -g parametresi eklendi.
 json-server --watch db.json
 
@@ -20,4 +21,3 @@ http://localhost:3000/posts
         "surname": "soyadi4"
     }
 
-    
