@@ -85,6 +85,7 @@
                         "name": $("#post_name").val(),
                         "surname": $("#post_surname").val()
                     }
+                    //.done eğer gerçekleşirse
                 }).done(function(veriler) {
                     for (let i = 0; i < 20; i++) {
                         let tr_table = "";
@@ -105,6 +106,27 @@
 
     <!-- get -->
     <script>
+        $(function() {
+            $("#ajaxGet").click(function() {
+                console.log("Tıklandı")
+                let baseUrl = "http://localhost:3000";
+                let tbody = $("#tbody_id");
+                $.ajax({
+                    method: "GET",
+                    url: baseUrl + "/posts"
+                }).done(function(veriler) {
+                    for (let j = 0; j < 20; j++) {
+                        let tr_table = "";
+                        tr_table +=
+                            '<tr><td>' + veriler[j].id + '</td>' + '<td>' + veriler[j].name + '</td>' + '<td>' + veriler[j].surname + '</td></tr>';
+                        tbody.append(tr_table);
+                    }
+                }).fail(function() {
+                    $("#failed_id").html("Listeleme sırasında hata meydana geldi");
+                    alert("Listeleme sırasında hata meydana geldi");
+                });
+            });
+        })
     </script>
 
 
